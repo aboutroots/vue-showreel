@@ -5,6 +5,7 @@ import AllIosIcon from 'vue-ionicons/dist/ionicons-ios';
 
 import App from './App.vue';
 import router from './router';
+import store from './store';
 
 // import global styles from external file.
 import './assets/styles/styles.scss';
@@ -19,5 +20,6 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  store,
   render: (h) => h(App),
 }).$mount('#app');

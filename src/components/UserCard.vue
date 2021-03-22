@@ -54,6 +54,7 @@ export default {
   }
   .subtitle {
     color: $gray;
+    cursor: auto;
   }
 }
 </style>

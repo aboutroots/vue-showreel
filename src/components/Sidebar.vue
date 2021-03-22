@@ -16,8 +16,18 @@
         <ios-mail-icon class="nav-link-icon" w="20" h="20" />
         Form example</router-link
       >
+      <router-link to="/private-page" class="nav-link">
+        <ios-lock-icon class="nav-link-icon" w="20" h="20" />
+        Private page example</router-link
+      >
+      <router-link to="/login" class="nav-link">
+        <ios-people-icon class="nav-link-icon" w="20" h="20" />
+        Login page</router-link
+      >
     </div>
-    <a href="https://github.com/aboutroots/vue-showreel/" class="btn btn-cta shadow">Check source on github</a>
+    <a href="https://github.com/aboutroots/vue-showreel/" class="btn btn-cta shadow"
+      >Check source on github</a
+    >
   </div>
 </template>
 

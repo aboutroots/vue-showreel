@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <section class="home container">
     <img alt="Vue logo" src="@/assets/img/logo.png" />
     <h1>Welcome!</h1>
     <p class="copy">
@@ -8,7 +8,7 @@
       bar.)
     </p>
     <img src="@/assets/img/building.svg" class="bg-img" />
-  </div>
+  </section>
 </template>
 
 <script>

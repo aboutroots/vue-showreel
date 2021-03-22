@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <h1>This is User List View</h1>
+  <section class="container">
+    <h1>Users</h1>
+    <p>Click on user card to view user profile.</p>
     <Loader v-if="processing" />
     <div v-else class="cards-wrapper fadeIn">
-      <UserCard :user="user" v-for="user in users" :key="user.id" />
+      <UserCard v-for="user in users" :key="user.id" :user="user" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

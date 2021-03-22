@@ -1,8 +1,10 @@
 <template>
-  <div class="not-found">
-    <h1>Sorry, the page you requested was not found!</h1>
-    <img src="@/assets/img/404.svg" class="bg-img" />
-  </div>
+  <section class="container">
+    <div class="not-found">
+      <h1>Sorry, the page you requested was not found!</h1>
+      <img src="@/assets/img/404.svg" class="bg-img" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -16,6 +18,6 @@ export default {
   text-align: center;
 }
 .bg-img {
-  max-height: 300px;
+  max-height: 200px;
 }
 </style>

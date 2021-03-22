@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="container">
     <h1>User Detail View</h1>
     <Loader v-if="processing" />
     <div v-else class="user-detail fadeIn">
@@ -15,7 +15,7 @@
       </div>
       <img src="@/assets/img/collab.svg" class="bg-img" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
