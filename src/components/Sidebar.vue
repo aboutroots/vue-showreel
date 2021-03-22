@@ -17,7 +17,7 @@
         Form example</router-link
       >
     </div>
-    <a hre="https://github.com/aboutroots/" class="btn btn-cta shadow">Check source on github</a>
+    <a href="https://github.com/aboutroots/vue-showreel/" class="btn btn-cta shadow">Check source on github</a>
   </div>
 </template>
 
