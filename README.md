@@ -1,6 +1,14 @@
-# demo-vue
+# vue-showreel 
 
-## Project setup
+Includes exaples of:
+- [x] routing 
+- [x] working with rest api 
+- [x] using 3rd party libraries 
+- [ ] form validation 
+- [ ] global state management
+- [ ] private/public pages and authentication 
+
+## Development 
 ```
 yarn install
 ```
@@ -20,5 +28,3 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
