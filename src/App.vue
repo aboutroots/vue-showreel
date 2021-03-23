@@ -42,6 +42,9 @@ main {
   width: 100%;
   overflow: auto;
   padding: 2rem;
-  margin-left: $sidebar-width;
+
+  @media screen and (min-width: 768px) {
+    margin-left: $sidebar-width;
+  }
 }
 </style>

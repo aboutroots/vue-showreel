@@ -1,6 +1,11 @@
 <template>
-  <div id="nav">
+  <div id="nav" :class="{ collapsed }">
     <div class="routes-wrapper">
+      <div class="hamburger-wrapper">
+        <div class="hamburger-btn" @click="toggleCollapsed">
+          <ios-menu-icon w="32" h="32" />
+        </div>
+      </div>
       <router-link to="/" class="nav-link"
         ><ios-home-icon class="nav-link-icon" w="20" h="20" />Welcome!</router-link
       >
@@ -30,6 +35,21 @@
     >
   </div>
 </template>
+<script>
+export default {
+  name: 'Sidebar',
+  data() {
+    return {
+      collapsed: true,
+    };
+  },
+  methods: {
+    toggleCollapsed() {
+      this.collapsed = !this.collapsed;
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 @import '@/assets/styles/theme.scss';
@@ -37,14 +57,27 @@
 #nav {
   padding: 2rem;
   position: fixed;
-  width: $sidebar-width;
   height: 100vh;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: auto;
-
+  transition: transform 0.3s linear;
   background-color: $dark2;
+
+  // Giding sidebar on mobile devices
+  width: $sidebar-width;
+  @media screen and (max-width: 768px) {
+    &.collapsed {
+      transform: translateX(-$sidebar-width);
+    }
+  }
+  @media screen and (max-width: 375px) {
+    width: 250px;
+    &.collapsed {
+      transform: translateX(-250px);
+    }
+  }
 
   .routes-wrapper {
     display: flex;
@@ -67,6 +100,27 @@
 
     &.router-link-exact-active {
       color: $light;
+    }
+  }
+  .hamburger-wrapper {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: relative;
+      overflow: visible;
+      .hamburger-btn {
+        background: $dark2;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: -12px;
+        right: -94px;
+        z-index: 100;
+      }
     }
   }
 }
