@@ -20,6 +20,8 @@ export default {
     ...mapActions(['LOGOUT_USER']),
     onLogout() {
       this.LOGOUT_USER();
+      this.$router.push({ path: '/' });
+      this.$toast.open('Signed out!');
     },
   },
 };

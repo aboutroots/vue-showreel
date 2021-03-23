@@ -11,6 +11,9 @@ Includes exaples of:
 TODO:
 
 - [ ] advanced form validation
+- [ ] responsive design
+- [ ] multi-language support (i18n)
+- [ ] light/dark theme
 
 ## Development
 

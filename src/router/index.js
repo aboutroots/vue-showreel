@@ -45,6 +45,9 @@ const routes = [
     path: '/login',
     name: 'Login Page',
     component: () => import(/* webpackChunkName: "login" */ '../views/LoginView.vue'),
+    props(route) {
+      return { route };
+    },
     meta: {
       public: true,
     },
@@ -59,7 +62,7 @@ const routes = [
   },
   {
     path: '*',
-    name: 'NotFound',
+    name: 'Not Found',
     component: () => import(/* webpackChunkName: "not-found" */ '../views/NotFoundView.vue'),
     meta: {
       public: true,
@@ -84,9 +87,10 @@ router.beforeEach((to, from, next) => {
         if (store.getters.isAuthenticated) {
           next();
         } else {
+          console.log(to.path);
           next({
             name: 'Login Page',
-            params: { nextRoute: to.path },
+            query: { nextRoute: to.fullPath },
           });
         }
       });

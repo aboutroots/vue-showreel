@@ -8,6 +8,8 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 import Sidebar from '@/components/Sidebar.vue';
 import Header from '@/components/Header.vue';
 
@@ -16,6 +18,15 @@ export default {
   components: {
     Sidebar,
     Header,
+  },
+  created() {
+    // try to automatically log in user
+    this.AUTHENTICATE_USER().catch(() => {
+      this.LOGOUT_USER();
+    });
+  },
+  methods: {
+    ...mapActions(['AUTHENTICATE_USER', 'LOGOUT_USER']),
   },
 };
 </script>
