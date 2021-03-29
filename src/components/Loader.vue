@@ -1,5 +1,5 @@
 <template>
-  <div class="spinner-wrapper">
+  <div class="spinner-wrapper" :class="{ fullPage }">
     <ios-sync-icon class="spinner" w="40" h="40" />
   </div>
 </template>
@@ -7,6 +7,11 @@
 <script>
 export default {
   name: 'Loader',
+  props: {
+    fullPage: {
+      type: Boolean,
+    },
+  },
 };
 </script>
 
@@ -19,6 +24,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.fullPage {
+    margin-top: -4rem;
+    height: 100vh;
+  }
 }
 .spinner {
   animation: spin 1000ms linear infinite;

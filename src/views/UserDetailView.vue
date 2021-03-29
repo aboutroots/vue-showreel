@@ -81,9 +81,11 @@ export default {
   padding: 2rem;
   border-top: 1px solid $gray;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   .btn {
-    margin-right: 2rem;
+    margin: 0.5rem 2rem;
     .btn-icon {
       margin-right: 0.5rem;
     }

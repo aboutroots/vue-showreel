@@ -17,7 +17,4 @@ export default {
   padding: 2rem;
   text-align: center;
 }
-.bg-img {
-  max-height: 200px;
-}
 </style>

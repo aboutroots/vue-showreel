@@ -31,7 +31,14 @@ a {
 }
 
 .container {
-  max-width: 1000px;
+  width: 1000px;
+  max-width: 90%;
+  @include tabletDown {
+    max-width: 100%;
+    width: calc(100vw - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 // Colors -----------------
@@ -51,7 +58,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
   transition: all 0.1s linear;
 
   &:hover {
@@ -89,6 +97,15 @@ a {
   &.big {
     min-height: 200px;
   }
+}
+
+// Images -----------------
+
+.bg-img {
+  max-height: 300px;
+  margin: 1rem auto;
+  max-width: 200px;
+  width: 100%;
 }
 
 // Animations ------------------

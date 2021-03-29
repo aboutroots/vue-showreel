@@ -11,16 +11,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.container {
-  padding: 2rem;
-}
 .copy {
+  text-align: center;
   line-height: 1.5;
   max-width: 800px;
   margin: 0 auto;
-}
-.bg-img {
-  margin: 2rem auto;
-  max-height: 300px;
 }
 </style>

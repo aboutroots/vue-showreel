@@ -29,8 +29,11 @@ export default {
       pass: '',
     };
   },
+  computed: {
+    ...mapGetters('auth', ['isAuthenticated']),
+  },
   methods: {
-    ...mapActions(['LOGIN_USER']),
+    ...mapActions('auth', ['LOGIN_USER']),
     cleanup() {
       this.email = '';
       this.pass = '';
@@ -53,9 +56,6 @@ export default {
       }
     },
   },
-  computed: {
-    ...mapGetters(['isAuthenticated']),
-  },
 };
 </script>
 
@@ -63,7 +63,7 @@ export default {
 .login-form {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
   margin: 2rem auto;
   max-width: 600px;
 }

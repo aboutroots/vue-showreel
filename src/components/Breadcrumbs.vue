@@ -22,11 +22,13 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/theme.scss';
 .breadcrumbs {
+  flex: 1;
   display: flex;
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 .icon {
   color: $light;

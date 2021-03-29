@@ -21,9 +21,20 @@ export default {
 @import '@/assets/styles/theme.scss';
 
 #header {
-  padding: 1rem 0;
-  width: 100%;
+  padding: 1rem;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
+
+  // leave some space for hamburger button on mobile
+  $ham-button-width: 60px;
+  margin-left: $ham-button-width;
+  width: calc(100vw - #{$ham-button-width});
+
+  @include tabletUp {
+    margin-left: $sidebar-width;
+    width: calc(100vw - #{$sidebar-width});
+  }
 }
 </style>

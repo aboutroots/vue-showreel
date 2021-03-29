@@ -1,9 +1,13 @@
 <template>
-  <div v-if="!isAuthenticated">Anonymous user</div>
-  <div v-else class="auth-wrap">
-    <span> Signed in as </span>
-    <span class="username">{{ currentUser.email }}</span>
-    <button class="btn" @click="onLogout">Sign out</button>
+  <div class="login-indicator">
+    <div v-if="!isAuthenticated">Anonymous user</div>
+    <div v-else class="auth-wrap">
+      <span class="sub"> Signed in as </span>
+      <span class="username">{{ currentUser.email }}</span>
+      <div class="logout-icon" @click="onLogout">
+        <ios-log-out-icon w="20" h="20" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,11 +17,11 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 export default {
   name: 'LoginIndicator',
   computed: {
-    ...mapGetters(['isAuthenticated']),
-    ...mapState(['currentUser']),
+    ...mapGetters('auth', ['isAuthenticated']),
+    ...mapState('auth', ['currentUser']),
   },
   methods: {
-    ...mapActions(['LOGOUT_USER']),
+    ...mapActions('auth', ['LOGOUT_USER']),
     onLogout() {
       this.LOGOUT_USER();
       this.$router.push({ path: '/' });
@@ -30,14 +34,33 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/theme.scss';
 
+.login-indicator {
+  margin-bottom: 0.5rem;
+  flex: 1;
+}
+
 .auth-wrap {
   color: $gray;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   align-items: center;
   .username {
     margin: 0 0.5rem;
     color: $light;
+  }
+  .logout-icon {
+    cursor: pointer;
+  }
+
+  .sub {
+    display: none;
+  }
+
+  @include tabletUp {
+    .sub {
+      display: block;
+    }
   }
 }
 </style>

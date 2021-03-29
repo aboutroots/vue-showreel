@@ -15,3 +15,26 @@ $base-font: Avenir, Helvetica, Arial, sans-serif;
 // spacing
 
 $sidebar-width: 300px;
+
+// media queries
+
+@mixin tabletDown {
+  // everything smaller than or equal to tablet screen
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tabletUp {
+  // everything bigger than or equal to tablet screen
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phoneDown {
+  // everything smaller than or equal to phone screen
+  @media (max-width: 375px) {
+    @content;
+  }
+}

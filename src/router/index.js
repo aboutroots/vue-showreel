@@ -77,14 +77,15 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if (to.meta.public || store.getters.isAuthenticated) {
+  store.dispatch('ui/CLOSE_SIDEBAR');
+  if (to.meta.public || store.getters['auth/isAuthenticated']) {
     next();
   } else {
     store
-      .dispatch('AUTHENTICATE_USER')
+      .dispatch('auth/AUTHENTICATE_USER')
       .catch(() => {})
       .then(() => {
-        if (store.getters.isAuthenticated) {
+        if (store.getters['auth/isAuthenticated']) {
           next();
         } else {
           console.log(to.path);

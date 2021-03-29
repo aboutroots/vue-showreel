@@ -1,8 +1,8 @@
 <template>
-  <div id="nav" :class="{ collapsed }">
+  <div id="nav" :class="{ collapsed: !sidebarOpen }">
     <div class="routes-wrapper">
       <div class="hamburger-wrapper">
-        <div class="hamburger-btn" @click="toggleCollapsed">
+        <div class="hamburger-btn shadow" @click="toggleCollapsed">
           <ios-menu-icon w="32" h="32" />
         </div>
       </div>
@@ -36,16 +36,17 @@
   </div>
 </template>
 <script>
+import { mapActions, mapState } from 'vuex';
+
 export default {
   name: 'Sidebar',
-  data() {
-    return {
-      collapsed: true,
-    };
+  computed: {
+    ...mapState('ui', ['sidebarOpen']),
   },
   methods: {
+    ...mapActions('ui', ['TOGGLE_SIDEBAR']),
     toggleCollapsed() {
-      this.collapsed = !this.collapsed;
+      this.TOGGLE_SIDEBAR();
     },
   },
 };
@@ -67,12 +68,12 @@ export default {
 
   // Giding sidebar on mobile devices
   width: $sidebar-width;
-  @media screen and (max-width: 768px) {
+  @include tabletDown {
     &.collapsed {
       transform: translateX(-$sidebar-width);
     }
   }
-  @media screen and (max-width: 375px) {
+  @include phoneDown {
     width: 250px;
     &.collapsed {
       transform: translateX(-250px);
@@ -104,7 +105,7 @@ export default {
   }
   .hamburger-wrapper {
     display: none;
-    @media screen and (max-width: 768px) {
+    @include tabletDown {
       display: block;
       position: relative;
       overflow: visible;
@@ -116,6 +117,7 @@ export default {
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        border: 2px solid $gray;
         position: absolute;
         top: -12px;
         right: -94px;

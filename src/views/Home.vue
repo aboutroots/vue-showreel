@@ -26,8 +26,4 @@ export default {
   max-width: 800px;
   margin: 0 auto;
 }
-.bg-img {
-  margin: 2rem auto;
-  max-height: 300px;
-}
 </style>

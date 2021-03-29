@@ -44,12 +44,13 @@ export default {
 
 .contact-view-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin: 0.5rem;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
   padding: 2rem;
   background-color: $dark2;
   border-radius: 12px;
@@ -58,8 +59,5 @@ export default {
   p {
     text-align: center;
   }
-}
-.bg-img {
-  max-height: 300px;
 }
 </style>
