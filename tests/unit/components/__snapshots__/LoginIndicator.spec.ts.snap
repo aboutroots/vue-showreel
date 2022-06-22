@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginIndicator tests suite matches snapshot 1`] = `
+<div
+  class="LoginIndicator login-indicator"
+>
+  <div>
+    Anonymous user
+  </div>
+</div>
+`;

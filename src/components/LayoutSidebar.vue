@@ -1,5 +1,5 @@
 <template>
-  <div id="nav" :class="{ collapsed: !sidebarOpen }">
+  <div id="nav" class="LayoutSidebar" :class="{ collapsed: !sidebarOpen }">
     <div class="routes-wrapper">
       <div class="hamburger-wrapper">
         <div class="hamburger-btn shadow" @click="toggleCollapsed" @keyup.enter="toggleCollapsed">

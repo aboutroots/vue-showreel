@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+  <div id="header" class="LayoutHeader">
     <Breadcrumbs />
     <LoginIndicator />
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="login-indicator">
+  <div class="LoginIndicator login-indicator">
     <div v-if="!isAuthenticated">Anonymous user</div>
     <div v-else class="auth-wrap">
       <span class="sub"> Signed in as </span>

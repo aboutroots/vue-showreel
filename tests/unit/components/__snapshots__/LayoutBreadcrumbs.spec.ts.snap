@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutBreadcrumbs tests suite matches snapshot 1`] = `
+<div
+  class="LayoutBreadcrumbs breadcrumbs"
+>
+  <router-link
+    to="/"
+  >
+    <ios-home-icon-stub
+      animate=""
+      class="icon"
+      h="16"
+      rootclass=""
+      title=""
+      w="16"
+    />
+  </router-link>
+   
+  <span
+    class="separator"
+  >
+    /
+  </span>
+  
+  
+
+</div>
+`;

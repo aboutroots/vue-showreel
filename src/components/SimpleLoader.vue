@@ -1,5 +1,5 @@
 <template>
-  <div class="spinner-wrapper" :class="{ fullPage }">
+  <div class="SimpleLoader spinner-wrapper" :class="{ fullPage }">
     <ios-sync-icon class="spinner" w="40" h="40" />
   </div>
 </template>

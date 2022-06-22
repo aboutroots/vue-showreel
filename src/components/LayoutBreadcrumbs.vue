@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumbs">
+  <div class="LayoutBreadcrumbs breadcrumbs">
     <router-link to="/">
       <ios-home-icon class="icon" w="16" h="16" />
     </router-link>

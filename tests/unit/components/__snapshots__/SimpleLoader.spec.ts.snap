@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleLoader tests suite matches snapshot 1`] = `
+<div
+  class="SimpleLoader spinner-wrapper"
+>
+  <ios-sync-icon-stub
+    animate=""
+    class="spinner"
+    h="40"
+    rootclass=""
+    title=""
+    w="40"
+  />
+</div>
+`;

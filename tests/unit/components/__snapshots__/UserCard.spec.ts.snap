@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard tests suite matches snapshot 1`] = `
+<router-link
+  class="UserCard user-card"
+  to="[object Object]"
+>
+  <img
+    alt="User avatar"
+    class="avatar"
+    src=""
+  />
+   
+  <h3
+    class="title"
+  >
+     
+  </h3>
+   
+  <p
+    class="subtitle"
+  >
+    
+  </p>
+</router-link>
+`;

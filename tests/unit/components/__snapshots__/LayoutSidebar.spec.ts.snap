@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutSidebar tests suite matches snapshot 1`] = `
+<div
+  class="LayoutSidebar"
+  id="nav"
+>
+  <div
+    class="routes-wrapper"
+  >
+    <div
+      class="hamburger-wrapper"
+    >
+      <div
+        class="hamburger-btn shadow"
+      >
+        <ios-menu-icon-stub
+          animate=""
+          h="32"
+          rootclass=""
+          title=""
+          w="32"
+        />
+      </div>
+    </div>
+     
+    <router-link
+      class="nav-link"
+      to="/"
+    >
+      <ios-home-icon-stub
+        animate=""
+        class="nav-link-icon"
+        h="20"
+        rootclass=""
+        title=""
+        w="20"
+      />
+      Welcome!
+    </router-link>
+     
+    <router-link
+      class="nav-link"
+      to="/users"
+    >
+      <ios-analytics-icon-stub
+        animate=""
+        class="nav-link-icon"
+        h="20"
+        rootclass=""
+        title=""
+        w="20"
+      />
+      
+      Rest API example
+    </router-link>
+     
+    <router-link
+      class="nav-link"
+      to="/somme-dummy-url"
+    >
+      <ios-alert-icon-stub
+        animate=""
+        class="nav-link-icon"
+        h="20"
+        rootclass=""
+        title=""
+        w="20"
+      />
+      
+      Bad link (404) example
+    </router-link>
+     
+    <router-link
+      class="nav-link"
+      to="/contact"
+    >
+      <ios-mail-icon-stub
+        animate=""
+        class="nav-link-icon"
+        h="20"
+        rootclass=""
+        title=""
+        w="20"
+      />
+      
+      Form example
+    </router-link>
+     
+    <router-link
+      class="nav-link"
+      to="/private-page"
+    >
+      <ios-lock-icon-stub
+        animate=""
+        class="nav-link-icon"
+        h="20"
+        rootclass=""
+        title=""
+        w="20"
+      />
+      
+      Private page example
+    </router-link>
+     
+    <router-link
+      class="nav-link"
+      to="/login"
+    >
+      <ios-people-icon-stub
+        animate=""
+        class="nav-link-icon"
+        h="20"
+        rootclass=""
+        title=""
+        w="20"
+      />
+      
+      Login page
+    </router-link>
+  </div>
+   
+  <a
+    class="btn btn-cta shadow"
+    href="https://github.com/aboutroots/vue-showreel/"
+  >
+    Check source on github
+  </a>
+</div>
+`;
