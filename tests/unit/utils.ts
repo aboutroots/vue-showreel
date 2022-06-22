@@ -87,17 +87,6 @@ export const shallowMount = (
         open: jest.fn(),
         error: jest.fn(),
       },
-      // $route: {
-      //   query: {},
-      //   params: {},
-      //   meta: {},
-      //   matched: [],
-      // },
-      // $router: {
-      //   replace: () => ({}),
-      //   resolve: () => ({}),
-      //   push: () => ({}),
-      // },
     },
     ...options,
   });

@@ -1,68 +1,20 @@
 <template>
   <section class="ContactView container">
     <div class="contact-view-wrapper">
-      <form class="contact-form" @submit="onSubmit">
-        <h1>Contact us!</h1>
-        <p>Amazing things are waiting for you, this is not a scam!!! 100% sure!</p>
-        <input
-          v-model="name"
-          type="text"
-          class="inp"
-          required
-          placeholder="Your name"
-          aria-label="your name"
-        />
-        <input
-          v-model="email"
-          type="email"
-          class="inp"
-          required
-          placeholder="Your email"
-          aria-label="your email"
-        />
-        <input
-          v-model="body"
-          type="textarea"
-          class="inp big"
-          required
-          placeholder="Your message"
-          aria-label="your message"
-        />
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </form>
+      <ComplexForm />
       <img src="@/assets/img/contract.svg" class="bg-img" alt="Background image with letter" />
     </div>
   </section>
 </template>
 
 <script lang="ts">
+import ComplexForm from '@/components/ComplexForm.vue';
 import Vue from 'vue';
 
-interface State {
-  name: string;
-  email: string;
-  body: string;
-}
 export default Vue.extend({
   name: 'ContactView',
-  data() {
-    return {
-      name: '',
-      email: '',
-      body: '',
-    } as State;
-  },
-  methods: {
-    onSubmit(e: Event): void {
-      e.preventDefault();
-      const data = {
-        name: this.name,
-        email: this.email,
-        body: this.body,
-      };
-      console.log('Submitted:', data);
-      this.$toast.open('Thanks!');
-    },
+  components: {
+    ComplexForm,
   },
 });
 </script>
