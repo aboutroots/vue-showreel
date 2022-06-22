@@ -2,7 +2,12 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9230fc8b-cd16-421a-b136-927023e71d52/deploy-status)](https://app.netlify.com/sites/vue-showreel-aboutroots/deploys)
 
+![qa workflow](https://github.com/aboutroots/vue-showreel/actions/workflows/quality-assurance.yml/badge.svg)
+
+![coverage](https://github.com/aboutroots/vue-showreel/badges/badge-statements.svg)
+
 live demo: https://vue-showreel-aboutroots.netlify.app/
+
 Example app made in Vue.js. Includes examples of:
 
 - [x] routing
@@ -12,10 +17,10 @@ Example app made in Vue.js. Includes examples of:
 - [x] private/public pages and authentication
 - [x] responsive design
 - [x] TypeScript support
+- [x] unit tests
 
 TODO:
 
-- [ ] unit tests
 - [ ] advanced form validation
 - [ ] multi-language support (i18n)
 - [ ] light/dark theme
@@ -24,36 +29,22 @@ TODO:
 
 ## Development
 
-```
+```bash
+# Install dependencies:
 yarn install
-```
 
-### Compiles and hot-reloads for development
-
-```
+# To compile and hot-reload for development:
 yarn serve
-```
 
-### Compiles and minifies for production
-
-```
+# To compiles and minify for production:
 yarn build
-```
 
-if you want to serve the production build locally, run
-
-```
+# if you want to serve the production build locally, run:
 yarn serve-static
-```
 
-### Lints and fixes files
-
-```
+# To lint and fix files:
 yarn lint
-```
 
-### Unit tests
-
-```
+# To run unit tests:
 yarn test
 ```

@@ -1,12 +1,20 @@
-name: quality-assurance
-on: [push]
+name: quality-assurance 
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
-  check-bats-version:
+  run-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: yarn install
-      - run: yarn test
+      - name: Install dependencies
+        run: yarn install
+      - name: Linter 
+        run: yarn lint
+      - name: Unit tests 
+        run: yarn test:coverage
