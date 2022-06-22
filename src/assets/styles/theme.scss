@@ -1,0 +1,42 @@
+// colors
+
+$primary: #5350ab;
+$dark: #21222a;
+$dark2: #1a1a1f;
+$gray: #6a7285;
+$light-gray: #c4c4c4;
+$light: #f3f3f3;
+$main-gradient: linear-gradient(45deg, $primary, #714b97);
+
+// fonts
+
+$base-font: Avenir, Helvetica, Arial, sans-serif;
+
+// spacing
+
+$footer-height: 82px;
+$header-height: 60px;
+$sidebar-width: 300px;
+
+// media queries
+
+@mixin tabletDown {
+  // everything smaller than or equal to tablet screen
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tabletUp {
+  // everything bigger than or equal to tablet screen
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin phoneDown {
+  // everything smaller than or equal to phone screen
+  @media (max-width: 375px) {
+    @content;
+  }
+}

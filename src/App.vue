@@ -1,32 +1,88 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <div v-if="isInitialAuthFinished" class="fadeInBasic">
+      <Sidebar />
+      <div>
+        <Header />
+        <main>
+          <router-view />
+        </main>
+        <footer id="footer">
+          made by <a href="https://github.com/aboutroots/">@aboutroots</a>
+        </footer>
+      </div>
+    </div>
+    <template v-else>
+      <Loader :full-page="true" />
+    </template>
   </div>
 </template>
+<script lang="ts">
+import Vue from 'vue';
+import { mapActions, mapGetters } from 'vuex';
+
+import Sidebar from '@/components/LayoutSidebar.vue';
+import Header from '@/components/LayoutHeader.vue';
+import Loader from '@/components/SimpleLoader.vue';
+
+export default Vue.extend({
+  name: 'App',
+  components: {
+    Sidebar,
+    Header,
+    Loader,
+  },
+  computed: {
+    ...mapGetters('auth', ['isInitialAuthFinished']),
+  },
+  created(): void {
+    // try to automatically log in user
+    this.AUTHENTICATE_USER()
+      .catch(() => {
+        this.LOGOUT_USER();
+      })
+      .finally(() => {
+        this.INITIAL_AUTH_FINISHED();
+      });
+  },
+  methods: {
+    ...mapActions('auth', ['AUTHENTICATE_USER', 'LOGOUT_USER', 'INITIAL_AUTH_FINISHED']),
+  },
+});
+</script>
 
 <style lang="scss">
+@import '@/assets/styles/theme.scss';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: flex;
+  max-width: 100vw;
+}
+main {
+  min-height: calc(100vh - $footer-height - $header-height);
+  width: 100%;
+  max-width: 100vw;
+  padding: 0.5rem;
+
+  @include tabletUp {
+    padding: 2rem;
+    margin-left: $sidebar-width;
+    max-width: calc(100vw - #{$sidebar-width} - 1rem);
+  }
 }
 
-nav {
-  padding: 30px;
-
+#footer {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid $dark;
+  padding: 2rem;
+  background: $dark2;
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    color: $primary;
+  }
+  @include tabletUp {
+    margin-left: $sidebar-width;
+    max-width: calc(100vw - #{$sidebar-width} - 1rem);
   }
 }
 </style>

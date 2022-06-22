@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import HelloWorld from '@/components/LayoutHeader.vue';
 
-describe('HelloWorld.vue', () => {
+describe('Header tests suite', () => {
   it('renders props.msg when passed', () => {
     const msg = 'new message';
     const wrapper = shallowMount(HelloWorld, {

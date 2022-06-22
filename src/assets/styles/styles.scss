@@ -1,0 +1,142 @@
+@import './normalize.css';
+@import './theme.scss';
+@import '~vue-ionicons/ionicons.scss';
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Basic elements ------------------
+
+body {
+  font-family: $base-font;
+  background-color: $dark;
+  color: $light;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.shadow {
+  box-shadow: 0px 2px 3px 2px #0000001a;
+}
+
+.container {
+  width: 1000px;
+  max-width: 90%;
+  @include tabletDown {
+    max-width: 100%;
+    width: calc(100vw - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// Colors -----------------
+
+.text-secondary {
+  color: $gray;
+}
+
+// Buttons ------------------
+
+.btn {
+  border: 1px solid $light;
+  color: $light;
+  background: none;
+  height: 2rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  transition: all 0.1s linear;
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
+
+.btn-cta {
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  background: $main-gradient;
+  border: none;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: none;
+}
+
+// Inputs ------------------
+
+.inp {
+  color: $light;
+  border: 1px solid $gray;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background: $dark;
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $primary;
+    outline: none;
+  }
+  &.big {
+    min-height: 200px;
+  }
+}
+
+// Images -----------------
+
+.bg-img {
+  max-height: 300px;
+  margin: 1rem auto;
+  max-width: 200px;
+  width: 100%;
+}
+
+// Animations ------------------
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.fadeInBasic {
+  animation: fadein 0.2s linear forwards;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.float {
+  transform: translatey(0px);
+  animation: float 3s ease-in-out infinite;
+}
