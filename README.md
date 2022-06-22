@@ -4,7 +4,7 @@
 
 ![qa workflow](https://github.com/aboutroots/vue-showreel/actions/workflows/quality-assurance.yml/badge.svg)
 
-![coverage](https://github.com/aboutroots/vue-showreel/badges/badge-statements.svg)
+![coverage](https://raw.githubusercontent.com/aboutroots/vue-showreel/master/badges/badge-statements.svg)
 
 live demo: https://vue-showreel-aboutroots.netlify.app/
 
