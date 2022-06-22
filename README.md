@@ -1,12 +1,18 @@
 # vue-showreel
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9230fc8b-cd16-421a-b136-927023e71d52/deploy-status)](https://app.netlify.com/sites/vue-showreel-aboutroots/deploys)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/aboutroots/vue-showreel/vue?color=42b883)
+![types](https://img.shields.io/npm/types/typescript)
+
+Build
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9230fc8b-cd16-421a-b136-927023e71d52/deploy-status)](https://app.netlify.com/sites/vue-showreel-aboutroots/deploys) ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m792061490-d7b3d6fff673078f7eed9725)
+
+**live demo**: https://vue-showreel-aboutroots.netlify.app/
+
+Tests
 
 ![qa workflow](https://github.com/aboutroots/vue-showreel/actions/workflows/quality-assurance.yml/badge.svg)
-
 ![coverage](https://raw.githubusercontent.com/aboutroots/vue-showreel/master/badges/badge-statements.svg)
-
-live demo: https://vue-showreel-aboutroots.netlify.app/
 
 Example app made in Vue.js. Includes examples of:
 
@@ -28,6 +34,8 @@ TODO:
 ![vue_showreel2](https://user-images.githubusercontent.com/17732172/174875618-273603e7-6360-416f-a9fc-f58728b42075.gif)
 
 ## Development
+
+Requirements: `node 16+`
 
 ```bash
 # Install dependencies:
