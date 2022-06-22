@@ -4,7 +4,10 @@ exports[`LayoutBreadcrumbs tests suite matches snapshot 1`] = `
 <div
   class="LayoutBreadcrumbs breadcrumbs"
 >
-  <router-link
+  <router-link-stub
+    ariacurrentvalue="page"
+    event="click"
+    tag="a"
     to="/"
   >
     <ios-home-icon-stub
@@ -15,7 +18,7 @@ exports[`LayoutBreadcrumbs tests suite matches snapshot 1`] = `
       title=""
       w="16"
     />
-  </router-link>
+  </router-link-stub>
    
   <span
     class="separator"

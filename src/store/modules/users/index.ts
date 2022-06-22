@@ -1,16 +1,15 @@
 import actions from './actions';
 import mutations from './mutations';
-import { State } from './types';
+import getters from './getters';
 
-export const defaultState = {
-  users: [],
-};
+import { getDefaultState, State } from './types';
 
-const state = (): State => defaultState;
+const state = (): State => getDefaultState();
 
 export default {
   namespaced: true,
   state,
   actions,
   mutations,
+  getters,
 };

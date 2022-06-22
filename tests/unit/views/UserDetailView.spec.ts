@@ -1,17 +1,10 @@
 import flushPromises from 'flush-promises';
 import UserDetailView from '@/views/UserDetailView.vue';
-import { UserDTO } from '@/models';
 import api from '@/services/api';
 import { shallowMount } from '../utils';
+import { defaultUser } from '../fixtures';
 
 jest.mock('@/services/api');
-const defaultUser: UserDTO = {
-  id: 1,
-  email: 'test@test.com',
-  first_name: 'John',
-  last_name: 'Test',
-  avatar: 'https://img.com/1.png',
-};
 
 describe('UserDetailView tests suite', () => {
   beforeEach(() => {

@@ -7,10 +7,12 @@ import usersModule from './modules/users';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export const storeConfig = {
   modules: {
     auth: authModule,
     ui: uiModule,
     users: usersModule,
   },
-});
+};
+
+export default new Vuex.Store(storeConfig);

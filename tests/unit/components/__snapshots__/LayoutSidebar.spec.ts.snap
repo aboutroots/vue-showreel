@@ -24,8 +24,11 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
       </div>
     </div>
      
-    <router-link
+    <router-link-stub
+      ariacurrentvalue="page"
       class="nav-link"
+      event="click"
+      tag="a"
       to="/"
     >
       <ios-home-icon-stub
@@ -37,10 +40,13 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
         w="20"
       />
       Welcome!
-    </router-link>
+    </router-link-stub>
      
-    <router-link
+    <router-link-stub
+      ariacurrentvalue="page"
       class="nav-link"
+      event="click"
+      tag="a"
       to="/users"
     >
       <ios-analytics-icon-stub
@@ -53,10 +59,13 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
       />
       
       Rest API example
-    </router-link>
+    </router-link-stub>
      
-    <router-link
+    <router-link-stub
+      ariacurrentvalue="page"
       class="nav-link"
+      event="click"
+      tag="a"
       to="/somme-dummy-url"
     >
       <ios-alert-icon-stub
@@ -69,10 +78,13 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
       />
       
       Bad link (404) example
-    </router-link>
+    </router-link-stub>
      
-    <router-link
+    <router-link-stub
+      ariacurrentvalue="page"
       class="nav-link"
+      event="click"
+      tag="a"
       to="/contact"
     >
       <ios-mail-icon-stub
@@ -85,10 +97,13 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
       />
       
       Form example
-    </router-link>
+    </router-link-stub>
      
-    <router-link
+    <router-link-stub
+      ariacurrentvalue="page"
       class="nav-link"
+      event="click"
+      tag="a"
       to="/private-page"
     >
       <ios-lock-icon-stub
@@ -101,10 +116,13 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
       />
       
       Private page example
-    </router-link>
+    </router-link-stub>
      
-    <router-link
+    <router-link-stub
+      ariacurrentvalue="page"
       class="nav-link"
+      event="click"
+      tag="a"
       to="/login"
     >
       <ios-people-icon-stub
@@ -117,7 +135,7 @@ exports[`LayoutSidebar tests suite matches snapshot 1`] = `
       />
       
       Login page
-    </router-link>
+    </router-link-stub>
   </div>
    
   <a

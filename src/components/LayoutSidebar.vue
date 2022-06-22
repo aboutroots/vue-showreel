@@ -36,14 +36,14 @@
   </div>
 </template>
 <script lang="ts">
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'LayoutSidebar',
   computed: {
-    ...mapState('ui', ['sidebarOpen']),
+    ...mapGetters('ui', ['sidebarOpen']),
   },
   methods: {
     ...mapActions('ui', ['TOGGLE_SIDEBAR']),

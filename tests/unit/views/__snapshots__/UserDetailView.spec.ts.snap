@@ -14,7 +14,7 @@ exports[`UserDetailView tests suite matches snapshot 1`] = `
     <img
       alt="User avatar"
       class="avatar"
-      src="https://img.com/1.png"
+      src="/img/1.png"
     />
      
     <h3
@@ -32,7 +32,7 @@ exports[`UserDetailView tests suite matches snapshot 1`] = `
     <p
       class="subtitle"
     >
-      test@test.com
+      johntest@test.com
     </p>
      
     <div

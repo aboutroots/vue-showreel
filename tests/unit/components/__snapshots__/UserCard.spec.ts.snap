@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UserCard tests suite matches snapshot 1`] = `
-<router-link
+<router-link-stub
+  ariacurrentvalue="page"
   class="UserCard user-card"
+  event="click"
+  tag="a"
   to="[object Object]"
 >
   <img
@@ -22,5 +25,5 @@ exports[`UserCard tests suite matches snapshot 1`] = `
   >
     
   </p>
-</router-link>
+</router-link-stub>
 `;

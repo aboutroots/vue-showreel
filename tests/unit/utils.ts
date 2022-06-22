@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { defaultState as defaultStateAuth } from '@/store/modules/auth';
-import { defaultState as defaultStateUi } from '@/store/modules/ui';
-import { defaultState as defaultStateUsers } from '@/store/modules/users';
+import { getDefaultState as getDefaultStateAuth } from '@/store/modules/auth/types';
+import { getDefaultState as getDefaultStateUi } from '@/store/modules/ui/types';
+import { getDefaultState as getDefaultStateUsers } from '@/store/modules/users/types';
 import { createLocalVue, shallowMount as originalShallowMount, VueClass } from '@vue/test-utils';
 
 import AllIosIcon from 'vue-ionicons/dist/ionicons-ios';
 import Vuex from 'vuex';
+import VueRouter from 'vue-router';
 
 type Dict = { [key: string]: unknown };
 interface Options {
@@ -24,6 +25,7 @@ export const shallowMount = (
 ) => {
   const localVue = createLocalVue();
   localVue.use(Vuex);
+  localVue.use(VueRouter);
   localVue.use(AllIosIcon);
 
   const propsData = {
@@ -35,10 +37,11 @@ export const shallowMount = (
   const modules = {
     auth: {
       namespaced: true,
-      state: defaultStateAuth,
+      state: getDefaultStateAuth(),
       getters: {
         isAuthenticated: () => false,
         isInitialAuthFinished: () => false,
+        currentUser: () => null,
       },
       actions: {
         LOGIN_USER: jest.fn(),
@@ -48,16 +51,22 @@ export const shallowMount = (
     },
     ui: {
       namespaced: true,
-      state: defaultStateUi,
+      state: getDefaultStateUi(),
       actions: {
         TOGGLE_SIDEBAR: jest.fn(),
+      },
+      getters: {
+        sidebarOpen: () => true,
       },
     },
     users: {
       namespaced: true,
-      state: defaultStateUsers,
+      state: getDefaultStateUsers(),
       actions: {
         FETCH_USERS: jest.fn(),
+      },
+      getters: {
+        usersList: () => [],
       },
     },
     ...(options.modules ?? {}),
@@ -65,27 +74,30 @@ export const shallowMount = (
 
   // @ts-ignore
   const store = new Vuex.Store({ modules, getters });
+
+  const router = new VueRouter();
   // @ts-ignore
   return originalShallowMount(component, {
     localVue,
     store,
+    router,
     propsData,
     mocks: {
       $toast: {
         open: jest.fn(),
         error: jest.fn(),
       },
-      $route: {
-        query: {},
-        params: {},
-        meta: {},
-        matched: [],
-      },
-      $router: {
-        replace: () => ({}),
-        resolve: () => ({}),
-        push: () => ({}),
-      },
+      // $route: {
+      //   query: {},
+      //   params: {},
+      //   meta: {},
+      //   matched: [],
+      // },
+      // $router: {
+      //   replace: () => ({}),
+      //   resolve: () => ({}),
+      //   push: () => ({}),
+      // },
     },
     ...options,
   });

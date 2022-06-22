@@ -12,15 +12,14 @@
 </template>
 
 <script lang="ts">
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 import Vue from 'vue';
 
 export default Vue.extend({
   name: 'LoginIndicator',
   computed: {
-    ...mapGetters('auth', ['isAuthenticated']),
-    ...mapState('auth', ['currentUser']),
+    ...mapGetters('auth', ['isAuthenticated', 'currentUser']),
   },
   methods: {
     ...mapActions('auth', ['LOGOUT_USER']),

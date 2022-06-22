@@ -1,14 +1,9 @@
 import actions from './actions';
 import getters from './getters';
 import mutations from './mutations';
-import { State } from './types';
+import { getDefaultState, State } from './types';
 
-export const defaultState = {
-  currentUser: null,
-  initialAuthFinished: false,
-};
-
-const state = (): State => defaultState;
+const state = (): State => getDefaultState();
 
 export default {
   namespaced: true,

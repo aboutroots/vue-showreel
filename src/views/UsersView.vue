@@ -13,7 +13,7 @@
 import UserCard from '@/components/UserCard.vue';
 import Loader from '@/components/SimpleLoader.vue';
 
-import { mapState, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 import Vue from 'vue';
 
@@ -34,7 +34,9 @@ export default Vue.extend({
   },
 
   computed: {
-    ...mapState('users', ['users']),
+    ...mapGetters('users', {
+      users: 'usersList',
+    }),
   },
 
   async mounted(): Promise<void> {
