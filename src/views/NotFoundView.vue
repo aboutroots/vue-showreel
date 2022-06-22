@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="NotFoundView container">
     <div class="not-found">
       <h1>Sorry, the page you requested was not found!</h1>
       <img src="@/assets/img/404.svg" class="bg-img" alt="image with number 404" />

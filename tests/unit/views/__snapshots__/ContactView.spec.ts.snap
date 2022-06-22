@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactView tests suite matches snapshot 1`] = `
+<section
+  class="ContactView container"
+>
+  <div
+    class="contact-view-wrapper"
+  >
+    <form
+      class="contact-form"
+    >
+      <h1>
+        Contact us!
+      </h1>
+       
+      <p>
+        Amazing things are waiting for you, this is not a scam!!! 100% sure!
+      </p>
+       
+      <input
+        aria-label="your name"
+        class="inp"
+        placeholder="Your name"
+        required="required"
+        type="text"
+      />
+       
+      <input
+        aria-label="your email"
+        class="inp"
+        placeholder="Your email"
+        required="required"
+        type="email"
+      />
+       
+      <input
+        aria-label="your message"
+        class="inp big"
+        placeholder="Your message"
+        required="required"
+        type="textarea"
+      />
+       
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+     
+    <img
+      alt="Background image with letter"
+      class="bg-img"
+      src="@/assets/img/contract.svg"
+    />
+  </div>
+</section>
+`;

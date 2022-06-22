@@ -1,5 +1,5 @@
 <template>
-  <section class="home container">
+  <section class="HomeView home container">
     <img alt="Vue logo" class="logo float" src="@/assets/img/logo.png" />
     <h1>Welcome!</h1>
     <p class="copy">

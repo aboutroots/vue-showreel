@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="ContactView container">
     <div class="contact-view-wrapper">
       <form class="contact-form" @submit="onSubmit">
         <h1>Contact us!</h1>

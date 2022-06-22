@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrivateDemoView tests suite matches snapshot 1`] = `
+<section
+  class="PrivateDemoView container"
+>
+  <p
+    class="copy"
+  >
+    Welcome to secret page, for logged in users only!
+  </p>
+   
+  <img
+    alt="Gem image"
+    class="gem-img float"
+    src="@/assets/img/gem.png"
+  />
+   
+  <img
+    alt="lock image"
+    class="bg-img"
+    src="@/assets/img/secure.svg"
+  />
+</section>
+`;

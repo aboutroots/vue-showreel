@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersView tests suite matches snapshot 1`] = `
+<section
+  class="UsersView container"
+>
+  <h1>
+    Users
+  </h1>
+   
+  <p>
+    Click on user card to view user profile.
+  </p>
+   
+  <div
+    class="cards-wrapper fadeInBasic"
+  />
+</section>
+`;

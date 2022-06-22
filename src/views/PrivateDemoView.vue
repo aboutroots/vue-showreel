@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="PrivateDemoView container">
     <p class="copy">Welcome to secret page, for logged in users only!</p>
     <img alt="Gem image" class="gem-img float" src="@/assets/img/gem.png" />
     <img src="@/assets/img/secure.svg" class="bg-img" alt="lock image" />

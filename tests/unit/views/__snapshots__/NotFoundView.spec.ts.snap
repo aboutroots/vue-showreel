@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundView tests suite matches snapshot 1`] = `
+<section
+  class="NotFoundView container"
+>
+  <div
+    class="not-found"
+  >
+    <h1>
+      Sorry, the page you requested was not found!
+    </h1>
+     
+    <img
+      alt="image with number 404"
+      class="bg-img"
+      src="@/assets/img/404.svg"
+    />
+  </div>
+</section>
+`;

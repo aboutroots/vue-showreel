@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="LoginView container">
     <form v-if="!isAuthenticated" class="login-form fadeInBasic" @submit="onSubmit">
       <h2>Please log in to continue.</h2>
       <p class="text-secondary">

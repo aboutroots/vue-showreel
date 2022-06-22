@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginView tests suite matches snapshot 1`] = `
+<section
+  class="LoginView container"
+>
+  <form
+    class="login-form fadeInBasic"
+  >
+    <h2>
+      Please log in to continue.
+    </h2>
+     
+    <p
+      class="text-secondary"
+    >
+      
+      You may have been redirected here because the page you accessed is restricted for authorized
+      users only.
+    
+    </p>
+     
+    <input
+      aria-label="email address"
+      class="inp"
+      placeholder="Email"
+      required="required"
+      type="email"
+    />
+     
+    <input
+      aria-label="password"
+      class="inp"
+      placeholder="Password"
+      required="required"
+      type="password"
+    />
+     
+    <button
+      class="btn btn-primary"
+    >
+      Sign in
+    </button>
+     
+    <p
+      class="text-secondary hint"
+    >
+      Hint: username: "george.bluth@reqres.in", password: "test"
+    </p>
+  </form>
+</section>
+`;

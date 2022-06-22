@@ -2,9 +2,11 @@ import actions from './actions';
 import mutations from './mutations';
 import { State } from './types';
 
-const state = (): State => ({
+export const defaultState = {
   users: [],
-});
+};
+
+const state = (): State => defaultState;
 
 export default {
   namespaced: true,

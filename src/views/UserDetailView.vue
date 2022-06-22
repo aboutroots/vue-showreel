@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="UserDetailView container">
     <h1>User Detail View</h1>
     <Loader v-if="processing" />
     <div v-else class="user-detail fadeInBasic">

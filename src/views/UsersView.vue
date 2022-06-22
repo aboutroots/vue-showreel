@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="UsersView container">
     <h1>Users</h1>
     <p>Click on user card to view user profile.</p>
     <Loader v-if="processing" />

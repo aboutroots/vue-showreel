@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeView tests suite matches snapshot 1`] = `
+<section
+  class="HomeView home container"
+>
+  <img
+    alt="Vue logo"
+    class="logo float"
+    src="@/assets/img/logo.png"
+  />
+   
+  <h1>
+    Welcome!
+  </h1>
+   
+  <p
+    class="copy"
+  >
+    
+    This is an example Vue app. It's using Vue Router that allows Single Page Application
+    functionality (if you start clicking on the sidebar, notice changes in the browser's search
+    bar.)
+  
+  </p>
+   
+  <img
+    alt="Background image with building"
+    class="bg-img"
+    src="@/assets/img/building.svg"
+  />
+</section>
+`;

@@ -3,10 +3,12 @@ import getters from './getters';
 import mutations from './mutations';
 import { State } from './types';
 
-const state = (): State => ({
+export const defaultState = {
   currentUser: null,
   initialAuthFinished: false,
-});
+};
+
+const state = (): State => defaultState;
 
 export default {
   namespaced: true,

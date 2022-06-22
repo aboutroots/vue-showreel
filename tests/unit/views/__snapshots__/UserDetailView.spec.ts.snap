@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetailView tests suite matches snapshot 1`] = `
+<section
+  class="UserDetailView container"
+>
+  <h1>
+    User Detail View
+  </h1>
+   
+  <div
+    class="user-detail fadeInBasic"
+  >
+    <img
+      alt="User avatar"
+      class="avatar"
+      src="https://img.com/1.png"
+    />
+     
+    <h3
+      class="title"
+    >
+      <span
+        class="last"
+      >
+        Test
+      </span>
+      , John
+    
+    </h3>
+     
+    <p
+      class="subtitle"
+    >
+      test@test.com
+    </p>
+     
+    <div
+      class="actions"
+    >
+      <button
+        class="btn"
+      >
+        + FOLLOW
+      </button>
+       
+      <button
+        class="btn"
+      >
+        <ios-mail-icon-stub
+          animate=""
+          class="btn-icon"
+          h="20"
+          rootclass=""
+          title=""
+          w="20"
+        />
+        SEND MESSAGE
+      </button>
+    </div>
+     
+    <img
+      alt="Background image with people collaborating"
+      class="bg-img"
+      src="@/assets/img/collab.svg"
+    />
+  </div>
+</section>
+`;
