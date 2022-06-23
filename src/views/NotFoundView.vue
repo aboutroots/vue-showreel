@@ -12,6 +12,11 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'NotFoundView',
+  head: {
+    title: {
+      inner: 'Not found',
+    },
+  },
 });
 </script>
 <style lang="scss" scoped>

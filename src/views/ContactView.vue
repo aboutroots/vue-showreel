@@ -45,6 +45,11 @@ interface State {
 }
 export default Vue.extend({
   name: 'ContactView',
+  head: {
+    title: {
+      inner: 'Contact us',
+    },
+  },
   data() {
     return {
       name: '',
@@ -84,7 +89,8 @@ export default Vue.extend({
   flex-direction: column;
   padding: 1rem;
   background-color: $dark2;
-  border-radius: 12px;
+  border-radius: 6px;
+  box-shadow: $main-box-shadow;
 
   h1,
   p {

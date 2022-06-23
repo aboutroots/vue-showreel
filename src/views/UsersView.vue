@@ -27,6 +27,13 @@ export default Vue.extend({
     UserCard,
     Loader,
   },
+
+  head: {
+    title: {
+      inner: 'Users list',
+    },
+  },
+
   data() {
     return {
       processing: false,

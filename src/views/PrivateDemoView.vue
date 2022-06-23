@@ -11,6 +11,11 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'PrivateDemoView',
+  head: {
+    title: {
+      inner: 'Secret page',
+    },
+  },
 });
 </script>
 <style lang="scss" scoped>

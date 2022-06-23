@@ -67,6 +67,7 @@ export default Vue.extend({
   justify-content: space-between;
   transition: transform 0.3s linear;
   background-color: $dark2;
+  box-shadow: $small-box-shadow;
 
   // Giding sidebar on mobile devices
   width: $sidebar-width;

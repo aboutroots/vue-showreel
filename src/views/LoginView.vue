@@ -44,6 +44,11 @@ interface State {
 
 export default Vue.extend({
   name: 'LoginView',
+  head: {
+    title: {
+      inner: 'Login',
+    },
+  },
   data() {
     return {
       email: '',

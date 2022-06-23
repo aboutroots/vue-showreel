@@ -7,6 +7,15 @@ $gray: #6a7285;
 $light-gray: #c4c4c4;
 $light: #f3f3f3;
 $main-gradient: linear-gradient(45deg, $primary, #714b97);
+$background-gradient: linear-gradient(
+  19deg,
+  rgba(26, 26, 31, 1) 10%,
+  rgba(33, 34, 42, 0.8248074229691877) 77%,
+  rgba(60, 58, 110, 0.6418942577030813) 100%
+);
+
+$main-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+$small-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 
 // fonts
 

@@ -16,6 +16,11 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'HomeView',
+  head: {
+    title: {
+      inner: 'Home',
+    },
+  },
 });
 </script>
 <style lang="scss" scoped>

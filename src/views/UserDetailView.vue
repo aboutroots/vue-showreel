@@ -3,15 +3,15 @@
     <h1>User Detail View</h1>
     <Loader v-if="processing" />
     <div v-else class="user-detail fadeInBasic">
-      <img :src="user.avatar" class="avatar" alt="User avatar" />
+      <img :src="user.avatar" class="avatar shadow" alt="User avatar" />
       <h3 class="title">
         <span class="last">{{ user.last_name }}</span
         >, {{ user.first_name }}
       </h3>
       <p class="subtitle">{{ user.email }}</p>
       <div class="actions">
-        <button class="btn">+ FOLLOW</button>
-        <button class="btn"><ios-mail-icon class="btn-icon" w="20" h="20" />SEND MESSAGE</button>
+        <button class="btn">+ Follow</button>
+        <button class="btn"><ios-mail-icon class="btn-icon" w="20" h="20" />Send message</button>
       </div>
       <img
         src="@/assets/img/collab.svg"
@@ -39,6 +39,13 @@ export default Vue.extend({
   components: {
     Loader,
   },
+
+  head: {
+    title: {
+      inner: 'User detail',
+    },
+  },
+
   data() {
     return {
       processing: false,
