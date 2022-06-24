@@ -13,7 +13,7 @@ exports[`UserDetailView tests suite matches snapshot 1`] = `
   >
     <img
       alt="User avatar"
-      class="avatar"
+      class="avatar shadow"
       src="/img/1.png"
     />
      
@@ -41,7 +41,7 @@ exports[`UserDetailView tests suite matches snapshot 1`] = `
       <button
         class="btn"
       >
-        + FOLLOW
+        + Follow
       </button>
        
       <button
@@ -55,7 +55,7 @@ exports[`UserDetailView tests suite matches snapshot 1`] = `
           title=""
           w="20"
         />
-        SEND MESSAGE
+        Send message
       </button>
     </div>
      
